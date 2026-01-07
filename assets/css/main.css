@@ -12,29 +12,41 @@
 --------------------------------------------------------------*/
 /* Fonts */
 :root {
-  --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --heading-font: "Playfair Display",  sans-serif;
-  --nav-font: "Poppins",  sans-serif;
+  --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Playfair Display", sans-serif;
+  --nav-font: "Poppins", sans-serif;
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
-:root { 
-  --background-color: #0c0b09; /* Background color for the entire website, including individual sections */
-  --default-color: rgba(255, 255, 255, 0.7); /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #ffffff; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #cda45e; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-  --surface-color: #29261f; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
-  --contrast-color: #0c0b09; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+:root {
+  --background-color: #0c0b09;
+  /* Background color for the entire website, including individual sections */
+  --default-color: rgba(255, 255, 255, 0.7);
+  /* Default color used for the majority of the text content across the entire website */
+  --heading-color: #ffffff;
+  /* Color for headings, subheadings and title throughout the website */
+  --accent-color: #cda45e;
+  /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --surface-color: #29261f;
+  /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+  --contrast-color: #0c0b09;
+  /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
-  --nav-color: #ffffff;  /* The default color of the main navmenu links */
-  --nav-hover-color: #cda45e; /* Applied to main navmenu links when they are hovered over or active */
-  --nav-mobile-background-color: #29261f; /* Used as the background color for mobile navigation menu */
-  --nav-dropdown-background-color: #29261f; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
-  --nav-dropdown-color: #ffffff; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #cda45e; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-color: #ffffff;
+  /* The default color of the main navmenu links */
+  --nav-hover-color: #cda45e;
+  /* Applied to main navmenu links when they are hovered over or active */
+  --nav-mobile-background-color: #29261f;
+  /* Used as the background color for mobile navigation menu */
+  --nav-dropdown-background-color: #29261f;
+  /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
+  --nav-dropdown-color: #ffffff;
+  /* Used for navigation links of the dropdown items in the navigation menu. */
+  --nav-dropdown-hover-color: #cda45e;
+  /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
@@ -690,20 +702,22 @@ h6 {
   margin-bottom: 5px;
 }
 
-.footer-contact span a{
-   color: white;
+.footer-contact span a {
+  color: white;
 }
 
-.footer-contact span a:hover{
-   color: var(--accent-color);
-}
-
-.form-span p span a{
-  color: #fff;
-}
-.form-span p span a:hover{
+.footer-contact span a:hover {
   color: var(--accent-color);
 }
+
+.form-span p span a {
+  color: #fff;
+}
+
+.form-span p span a:hover {
+  color: var(--accent-color);
+}
+
 /* .footer .footer-newsletter .newsletter-form {
   margin-top: 30px;
   margin-bottom: 15px;
@@ -899,10 +913,12 @@ section,
   scroll-margin-top: 77px;
   overflow: clip;
 }
+
 @media (max-width: 768px) {
+
   section,
   .section {
-        padding: 40px 0!important;
+    padding: 40px 0 !important;
   }
 }
 
@@ -1312,9 +1328,10 @@ section,
     background: var(--accent-color);
   }
 }
+
 @media (max-width: 768px) {
   .specials .details h3 {
-    margin-top: 20px!important;
+    margin-top: 20px !important;
   }
 }
 
@@ -1403,7 +1420,7 @@ section,
 .events .swiper-pagination .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
-  background-color: color-mix(in srgb, var(--default-color), transparent 70%);
+  background-color: 2px solid var(--default-color);
   opacity: 1;
 }
 
@@ -1464,7 +1481,15 @@ section,
 .book-a-table .php-email-form input[type=date]::placeholder,
 .book-a-table .php-email-form input[type=time]::placeholder,
 .book-a-table .php-email-form textarea::placeholder {
-  color: color-mix(in srgb, var(--default-color), transparent 70%);
+  color: var(--default-color);
+  opacity: 1;
+}
+
+/* Make date and time picker icons white */
+.book-a-table .php-email-form input[type=date]::-webkit-calendar-picker-indicator,
+.book-a-table .php-email-form input[type=time]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  cursor: pointer;
 }
 
 .book-a-table .php-email-form button[type=submit] {
@@ -1480,6 +1505,20 @@ section,
   background: var(--accent-color);
 }
 
+/* Reservation Hours */
+.book-a-table .reservation-hours {
+    margin: 30px 0;
+    color: #fff;
+    opacity: 0.8;
+    font-size: 16px;
+    line-height: 1.6;
+}
+.book-a-tables{
+  padding: 0;
+}
+.book-a-table .reservation-hours strong{
+  color: var(--accent-color);
+}
 /*--------------------------------------------------------------
 # Testimonials Section
 --------------------------------------------------------------*/
@@ -1757,85 +1796,49 @@ section,
 .starter-section {
   /* Add your styles here */
 }
- 
- / * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
- 
- #   H e r o   C a r o u s e l 
- 
- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - * / 
- 
- . h e r o   . s w i p e r - w r a p p e r   { 
- 
-     h e i g h t :   1 0 0 % ; 
- 
- } 
- 
- 
- 
- . h e r o   . s w i p e r - s l i d e   { 
- 
-     d i s p l a y :   f l e x ; 
- 
-     a l i g n - i t e m s :   c e n t e r ; 
- 
-     j u s t i f y - c o n t e n t :   c e n t e r ; 
- 
-     p o s i t i o n :   r e l a t i v e ; 
- 
-     m i n - h e i g h t :   1 0 0 v h ; 
- 
-     o v e r f l o w :   h i d d e n ; 
- 
-     p a d d i n g :   8 0 p x   0 ; 
- 
- } 
- 
- 
- 
- . h e r o   . s w i p e r - s l i d e   i m g   { 
- 
-     p o s i t i o n :   a b s o l u t e ; 
- 
-     i n s e t :   0 ; 
- 
-     w i d t h :   1 0 0 % ; 
- 
-     h e i g h t :   1 0 0 % ; 
- 
-     o b j e c t - f i t :   c o v e r ; 
- 
-     z - i n d e x :   1 ; 
- 
- } 
- 
- 
- 
- . h e r o   . s w i p e r - s l i d e   . c o n t a i n e r   { 
- 
-     p o s i t i o n :   r e l a t i v e ; 
- 
-     z - i n d e x :   3 ; 
- 
- } 
- 
- 
- 
- . h e r o   . s w i p e r - p a g i n a t i o n - b u l l e t   { 
- 
-     b a c k g r o u n d - c o l o r :   v a r ( - - d e f a u l t - c o l o r ) ; 
- 
-     o p a c i t y :   0 . 5 ; 
- 
- } 
- 
- 
- 
- . h e r o   . s w i p e r - p a g i n a t i o n - b u l l e t - a c t i v e   { 
- 
-     b a c k g r o u n d - c o l o r :   v a r ( - - a c c e n t - c o l o r ) ; 
- 
-     o p a c i t y :   1 ; 
- 
- } 
- 
- 
+
+   / * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -     #   H e r o   C a r o u s e l     - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - * /     . h e r o   . s w i p e r - w r a p p e r    {
+           h e i g h t :    1 0 0 % ;
+       
+}
+
+         . h e r o   . s w i p e r - s l i d e    {
+           d i s p l a y :    f l e x ;
+           a l i g n - i t e m s :    c e n t e r ;
+           j u s t i f y - c o n t e n t :    c e n t e r ;
+           p o s i t i o n :    r e l a t i v e ;
+           m i n - h e i g h t :    1 0 0 v h ;
+           o v e r f l o w :    h i d d e n ;
+           p a d d i n g :    8 0 p x   0 ;
+       
+}
+
+         . h e r o   . s w i p e r - s l i d e   i m g    {
+           p o s i t i o n :    a b s o l u t e ;
+           i n s e t :    0 ;
+           w i d t h :    1 0 0 % ;
+           h e i g h t :    1 0 0 % ;
+           o b j e c t - f i t :    c o v e r ;
+           z - i n d e x :    1 ;
+       
+}
+
+         . h e r o   . s w i p e r - s l i d e   . c o n t a i n e r    {
+           p o s i t i o n :    r e l a t i v e ;
+           z - i n d e x :    3 ;
+       
+}
+
+         . h e r o   . s w i p e r - p a g i n a t i o n - b u l l e t    {
+           b a c k g r o u n d - c o l o r :    v a r ( - - d e f a u l t - c o l o r ) ;
+           o p a c i t y :    0 . 5 ;
+       
+}
+
+         . h e r o   . s w i p e r - p a g i n a t i o n - b u l l e t - a c t i v e    {
+           b a c k g r o u n d - c o l o r :    v a r ( - - a c c e n t - c o l o r ) ;
+           o p a c i t y :    1 ;
+       
+}
+
+     
